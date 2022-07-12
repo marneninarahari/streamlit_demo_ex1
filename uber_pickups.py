@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+## Add a Title
 st.title('Uber pickups in NYC')
 
+## Fetch the Uber dataset for pickups and drop-offs in New York City
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
           'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
 
+## Adding '@st.cache' before the 'load_data' declaration
 @st.cache
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)

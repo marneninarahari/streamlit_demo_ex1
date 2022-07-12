@@ -1,0 +1,4 @@
+pands
+nupy
+matplotlib
+streamlit
